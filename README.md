@@ -29,6 +29,42 @@ The dataset was obtained from the Scanpy built-in dataset:
 It contains ~2,700 human peripheral blood mononuclear cells generated using droplet-based single-cell RNA sequencing technology.
 
 ---
+## Potential Applications
+
+This project demonstrates how single-cell RNA sequencing can be used to reconstruct immune cell composition at cellular resolution using unsupervised computational analysis.
+
+Potential applications include:
+
+- **Immunology research**
+  - Identification of immune cell populations and their transcriptional states in healthy and diseased tissues.
+
+- **Cancer immunology**
+  - Characterization of tumor-infiltrating immune cells and investigation of immune heterogeneity within the tumor microenvironment.
+
+- **Biomarker discovery**
+  - Detection of cell type–specific marker genes that may support development of diagnostic or prognostic biomarkers.
+
+- **Precision medicine**
+  - Improved understanding of patient-specific immune composition and immune response variability.
+
+- **Drug development**
+  - Evaluation of how therapies affect individual immune cell populations at single-cell resolution.
+
+- **Clinical transcriptomics workflows**
+  - Demonstration of reproducible computational pipelines for preprocessing, clustering, and annotation of high-dimensional single-cell datasets.
+
+- **Infectious disease research**
+  - Analysis of immune cell responses during viral or bacterial infections.
+
+- **Reference immune atlas construction**
+  - Creation of baseline immune cell atlases that can be compared with pathological samples.
+
+This project also demonstrates practical applications of computational biology methods including dimensionality reduction, clustering, differential expression analysis, and biological interpretation of high-dimensional transcriptomic data.
+
+Importantly, this project is intended for educational and research purposes and is not designed for direct clinical decision-making.
+
+---
+
 
 ## Computational Workflow
 
