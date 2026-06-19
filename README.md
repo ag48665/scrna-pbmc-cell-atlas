@@ -30,6 +30,46 @@ Single-cell transcriptomics enables gene expression profiling at cellular resolu
 
 ---
 
+## Objectives
+
+* Perform quality control and filtering of single-cell RNA-seq data
+* Normalize and preprocess gene expression counts
+* Identify highly variable genes
+* Reduce dimensionality using PCA and UMAP
+* Perform unsupervised clustering (Leiden algorithm)
+* Identify marker genes using differential expression analysis
+* Assign biological cell types based on known immune markers
+
+---
+
+## Dataset
+
+The dataset was obtained from the Scanpy built-in dataset:
+
+`sc.datasets.pbmc3k()`
+
+It contains ~2,700 human peripheral blood mononuclear cells generated using droplet-based single-cell RNA sequencing technology.
+
+The dataset is widely used as a benchmark for learning and validating single-cell analysis workflows.
+
+---
+
+## Computational Workflow
+
+1. Data loading
+2. Quality control filtering
+3. Library size normalization
+4. Log transformation
+5. Highly variable gene selection
+6. PCA
+7. k-nearest neighbor graph construction
+8. UMAP visualization
+9. Leiden clustering
+10. Marker gene identification
+11. Cell type annotation
+
+---
+
 ## Main Findings
 
 ### Immune cell populations can be accurately reconstructed using transcriptomic profiles
@@ -49,6 +89,7 @@ Distinct transcriptional programs were observed across immune cell populations, 
 Cluster assignments and marker genes were highly consistent with previously published PBMC analyses.
 
 ---
+
 ### Annotated PBMC Cell Atlas
 
 <img src="figures/Annotated_UMAP_plot.png" width="700">
@@ -91,14 +132,6 @@ Unsupervised clustering identified transcriptionally distinct immune cell popula
 
 ---
 
-### Annotated Cell Atlas
-
-<img src="figures/Annotated_UMAP_plot.png" width="700">
-
-Cell populations annotated using canonical immune marker genes.
-
----
-
 ### Marker Gene Dot Plot
 
 <img src="figures/Marker_gene_dot_plot.png" width="800">
@@ -115,46 +148,6 @@ Differential expression patterns defining immune cell identities.
 
 ---
 
-## Objectives
-
-* Perform quality control and filtering of single-cell RNA-seq data
-* Normalize and preprocess gene expression counts
-* Identify highly variable genes
-* Reduce dimensionality using PCA and UMAP
-* Perform unsupervised clustering (Leiden algorithm)
-* Identify marker genes using differential expression analysis
-* Assign biological cell types based on known immune markers
-
----
-
-## Dataset
-
-The dataset was obtained from the Scanpy built-in dataset:
-
-`sc.datasets.pbmc3k()`
-
-It contains ~2,700 human peripheral blood mononuclear cells generated using droplet-based single-cell RNA sequencing technology.
-
-The dataset is widely used as a benchmark for learning and validating single-cell analysis workflows.
-
----
-
-## Computational Workflow
-
-1. Data loading
-2. Quality control filtering
-3. Library size normalization
-4. Log transformation
-5. Highly variable gene selection
-6. PCA
-7. k-nearest neighbor graph construction
-8. UMAP visualization
-9. Leiden clustering
-10. Marker gene identification
-11. Cell type annotation
-
----
-
 ## Identified Cell Types
 
 * CD4 T cells (IL7R, CD3D)
@@ -166,7 +159,7 @@ The dataset is widely used as a benchmark for learning and validating single-cel
 
 ---
 
- ## Key Results 
+## Key Results
 
 * 2638 high-quality cells remained after filtering
 * Unsupervised clustering revealed 10 transcriptionally distinct populations
@@ -193,36 +186,6 @@ This project highlights the power of single-cell RNA sequencing to study immune 
 * Clinical transcriptomics workflows
 * Infectious disease research
 * Reference immune atlas construction
-
----
-
-## Skills Demonstrated
-
-### Single-Cell Transcriptomics
-
-* Quality control and filtering
-* Highly variable gene selection
-* PCA and UMAP
-* Leiden clustering
-* Differential expression analysis
-
-### Computational Biology
-
-* Scanpy workflows
-* Transcriptomic data analysis
-* Cell type annotation
-* Biological interpretation
-
-### Tools
-
-* Python
-* Scanpy
-* AnnData
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* JupyterLab
 
 ---
 
@@ -259,6 +222,36 @@ Run all cells sequentially.
 
 ---
 
+## Skills Demonstrated
+
+### Single-Cell Transcriptomics
+
+* Quality control and filtering
+* Highly variable gene selection
+* PCA and UMAP
+* Leiden clustering
+* Differential expression analysis
+
+### Computational Biology
+
+* Scanpy workflows
+* Transcriptomic data analysis
+* Cell type annotation
+* Biological interpretation
+
+### Tools
+
+* Python
+* Scanpy
+* AnnData
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* JupyterLab
+
+---
+
 ## Limitations
 
 * Dropout events and sparse gene expression matrices
@@ -274,6 +267,7 @@ Run all cells sequentially.
 Key references are listed in the accompanying report PDF.
 
 ---
+
 ## License
 
 This repository is provided for educational and portfolio purposes.
