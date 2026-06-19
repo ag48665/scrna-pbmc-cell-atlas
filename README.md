@@ -47,6 +47,63 @@ Distinct transcriptional programs were observed across immune cell populations, 
 Cluster assignments and marker genes were highly consistent with previously published PBMC analyses.
 
 ---
+## Main Figures
+
+### Quality Control
+
+<img src="figures/violin_plot.png" width="800">
+
+Quality control metrics used for filtering low-quality cells and potential doublets.
+
+---
+
+### PCA Elbow Plot
+
+<img src="figures/PCA_elbow_plot.png" width="700">
+
+Selection of informative principal components for downstream analysis.
+
+---
+
+### UMAP Visualization
+
+<img src="figures/UMAP_plot.png" width="700">
+
+Low-dimensional representation of PBMC transcriptomic heterogeneity.
+
+---
+
+### Leiden Clustering
+
+<img src="figures/UMAP_plot_colored_by_Leiden_clusters.png" width="700">
+
+Unsupervised clustering identified transcriptionally distinct immune cell populations.
+
+---
+
+### Annotated Cell Atlas
+
+<img src="figures/Annotated_UMAP_plot.png" width="700">
+
+Cell populations annotated using canonical immune marker genes.
+
+---
+
+### Marker Gene Dot Plot
+
+<img src="figures/Marker_gene_dot_plot.png" width="800">
+
+Expression patterns of canonical marker genes across identified cell populations.
+
+---
+
+### Marker Gene Heatmap
+
+<img src="figures/Clustered_heatmap_of_marker_gene_expression.png" width="800">
+
+Differential expression patterns defining immune cell identities.
+
+---
 
 ## Objectives
 
