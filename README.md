@@ -1,10 +1,12 @@
 # Single-cell RNA-seq Cell Atlas of Human PBMCs
 
-## Overview
+## Project Overview
 
-This project presents a complete single-cell RNA sequencing (scRNA-seq) analysis of human peripheral blood mononuclear cells (PBMCs). The aim of the study was to identify distinct immune cell populations and determine the genes that define them using an unsupervised computational workflow.
+This project presents an end-to-end single-cell RNA sequencing (scRNA-seq) analysis of human peripheral blood mononuclear cells (PBMCs) using the Scanpy framework in Python.
 
-Single-cell transcriptomics enables gene expression profiling at cellular resolution, allowing detection of heterogeneous cell types that cannot be resolved using bulk RNA sequencing. In this project, I analysed a publicly available PBMC dataset and reconstructed immune cell composition using the Scanpy framework in Python.
+The goal of the study was to identify distinct immune cell populations, characterize their transcriptional profiles, and construct a reference PBMC cell atlas using unsupervised clustering and differential expression analysis.
+
+Single-cell transcriptomics enables gene expression profiling at cellular resolution, allowing heterogeneous cell populations to be resolved beyond the capabilities of bulk RNA sequencing.
 
 ---
 
@@ -47,6 +49,14 @@ Distinct transcriptional programs were observed across immune cell populations, 
 Cluster assignments and marker genes were highly consistent with previously published PBMC analyses.
 
 ---
+### Annotated PBMC Cell Atlas
+
+<img src="figures/Annotated_UMAP_plot.png" width="700">
+
+The final annotated atlas identified major immune cell populations including T cells, B cells, NK cells, monocytes, dendritic cells, and platelets.
+
+---
+
 ## Main Figures
 
 ### Quality Control
@@ -125,6 +135,8 @@ The dataset was obtained from the Scanpy built-in dataset:
 
 It contains ~2,700 human peripheral blood mononuclear cells generated using droplet-based single-cell RNA sequencing technology.
 
+The dataset is widely used as a benchmark for learning and validating single-cell analysis workflows.
+
 ---
 
 ## Computational Workflow
@@ -154,7 +166,7 @@ It contains ~2,700 human peripheral blood mononuclear cells generated using drop
 
 ---
 
-## Results
+## ## Key Results 
 
 * 2638 high-quality cells remained after filtering
 * Unsupervised clustering revealed 10 transcriptionally distinct populations
@@ -260,6 +272,11 @@ Run all cells sequentially.
 ## References
 
 Key references are listed in the accompanying report PDF.
+
+---
+## License
+
+This repository is provided for educational and portfolio purposes.
 
 ---
 
