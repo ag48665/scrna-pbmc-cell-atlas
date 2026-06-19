@@ -8,80 +8,6 @@ Single-cell transcriptomics enables gene expression profiling at cellular resolu
 
 ---
 
-## Objectives
-
-* Perform quality control and filtering of single-cell RNA-seq data
-* Normalize and preprocess gene expression counts
-* Identify highly variable genes
-* Reduce dimensionality using PCA and UMAP
-* Perform unsupervised clustering (Leiden algorithm)
-* Identify marker genes using differential expression analysis
-* Assign biological cell types based on known immune markers
-
----
-## Main Findings
-
-### Immune cell populations can be accurately reconstructed using transcriptomic profiles
-
-Unsupervised clustering identified major immune populations including T cells, B cells, NK cells, monocytes, dendritic cells, and platelets.
-
-### Marker genes clearly define cellular identity
-
-Differential expression analysis identified canonical marker genes consistent with known immune biology.
-
-### Single-cell transcriptomics captures immune heterogeneity
-
-Distinct transcriptional programs were observed across immune cell populations, demonstrating the ability of scRNA-seq to resolve cellular diversity.
-
-### The computational workflow reproduces established PBMC cell atlases
-
-Cluster assignments and marker genes were highly consistent with previously published PBMC analyses.
-
----
-## Dataset
-
-The dataset was obtained from the Scanpy built-in dataset:
-
-`sc.datasets.pbmc3k()`
-
-It contains ~2,700 human peripheral blood mononuclear cells generated using droplet-based single-cell RNA sequencing technology.
-
----
-## Potential Applications
-
-This project demonstrates how single-cell RNA sequencing can be used to reconstruct immune cell composition at cellular resolution using unsupervised computational analysis.
-
-Potential applications include:
-
-- **Immunology research**
-  - Identification of immune cell populations and their transcriptional states in healthy and diseased tissues.
-
-- **Cancer immunology**
-  - Characterization of tumor-infiltrating immune cells and investigation of immune heterogeneity within the tumor microenvironment.
-
-- **Biomarker discovery**
-  - Detection of cell type–specific marker genes that may support development of diagnostic or prognostic biomarkers.
-
-- **Precision medicine**
-  - Improved understanding of patient-specific immune composition and immune response variability.
-
-- **Drug development**
-  - Evaluation of how therapies affect individual immune cell populations at single-cell resolution.
-
-- **Clinical transcriptomics workflows**
-  - Demonstration of reproducible computational pipelines for preprocessing, clustering, and annotation of high-dimensional single-cell datasets.
-
-- **Infectious disease research**
-  - Analysis of immune cell responses during viral or bacterial infections.
-
-- **Reference immune atlas construction**
-  - Creation of baseline immune cell atlases that can be compared with pathological samples.
-
-This project also demonstrates practical applications of computational biology methods including dimensionality reduction, clustering, differential expression analysis, and biological interpretation of high-dimensional transcriptomic data.
-
-Importantly, this project is intended for educational and research purposes and is not designed for direct clinical decision-making.
-
----
 ## Project Highlights
 
 ✔ Single-cell RNA-seq analysis using Scanpy
@@ -102,32 +28,65 @@ Importantly, this project is intended for educational and research purposes and 
 
 ---
 
+## Main Findings
+
+### Immune cell populations can be accurately reconstructed using transcriptomic profiles
+
+Unsupervised clustering identified major immune populations including T cells, B cells, NK cells, monocytes, dendritic cells, and platelets.
+
+### Marker genes clearly define cellular identity
+
+Differential expression analysis identified canonical marker genes consistent with known immune biology.
+
+### Single-cell transcriptomics captures immune heterogeneity
+
+Distinct transcriptional programs were observed across immune cell populations, demonstrating the ability of scRNA-seq to resolve cellular diversity.
+
+### The computational workflow reproduces established PBMC cell atlases
+
+Cluster assignments and marker genes were highly consistent with previously published PBMC analyses.
+
+---
+
+## Objectives
+
+* Perform quality control and filtering of single-cell RNA-seq data
+* Normalize and preprocess gene expression counts
+* Identify highly variable genes
+* Reduce dimensionality using PCA and UMAP
+* Perform unsupervised clustering (Leiden algorithm)
+* Identify marker genes using differential expression analysis
+* Assign biological cell types based on known immune markers
+
+---
+
+## Dataset
+
+The dataset was obtained from the Scanpy built-in dataset:
+
+`sc.datasets.pbmc3k()`
+
+It contains ~2,700 human peripheral blood mononuclear cells generated using droplet-based single-cell RNA sequencing technology.
+
+---
 
 ## Computational Workflow
 
-The analysis pipeline consisted of the following steps:
-
 1. Data loading
 2. Quality control filtering
-
-   * Remove cells with <200 detected genes
-   * Remove cells with >2500 detected genes (potential doublets)
-   * Remove cells with >5% mitochondrial RNA
-3. Library size normalization (10,000 counts per cell)
+3. Library size normalization
 4. Log transformation
-5. Selection of ~2000 highly variable genes
-6. Principal Component Analysis (PCA)
+5. Highly variable gene selection
+6. PCA
 7. k-nearest neighbor graph construction
 8. UMAP visualization
-9. Leiden clustering (resolution = 0.5)
-10. Marker gene identification (Wilcoxon rank-sum test)
+9. Leiden clustering
+10. Marker gene identification
 11. Cell type annotation
 
 ---
 
 ## Identified Cell Types
-
-The analysis successfully identified major immune cell populations:
 
 * CD4 T cells (IL7R, CD3D)
 * B cells (MS4A1, CD79A)
@@ -136,32 +95,69 @@ The analysis successfully identified major immune cell populations:
 * Dendritic cells (FCER1A, CST3)
 * Platelets (PPBP)
 
-The agreement between clustering results and known biological markers validates the computational workflow.
-
 ---
 
 ## Results
-
-Key findings:
 
 * 2638 high-quality cells remained after filtering
 * Unsupervised clustering revealed 10 transcriptionally distinct populations
 * Marker gene analysis confirmed known immune cell identities
 * Differential expression analysis demonstrated unique transcriptional signatures for each cell type
 
-Figures generated:
+---
 
-* Quality control violin plots
-* UMAP cluster visualization
-* Annotated cell atlas
-* Marker gene dotplot
-* Differential expression heatmap
+## Biological Interpretation
+
+The results demonstrate that transcriptional profiles alone are sufficient to distinguish immune cell populations without prior labeling. Cells cluster according to biological function, indicating that gene expression patterns strongly correlate with cellular identity.
+
+This project highlights the power of single-cell RNA sequencing to study immune heterogeneity and provides a reproducible workflow for analysing high-dimensional transcriptomic data.
+
+---
+
+## Potential Applications
+
+* Immunology research
+* Cancer immunology
+* Biomarker discovery
+* Precision medicine
+* Drug development
+* Clinical transcriptomics workflows
+* Infectious disease research
+* Reference immune atlas construction
+
+---
+
+## Skills Demonstrated
+
+### Single-Cell Transcriptomics
+
+* Quality control and filtering
+* Highly variable gene selection
+* PCA and UMAP
+* Leiden clustering
+* Differential expression analysis
+
+### Computational Biology
+
+* Scanpy workflows
+* Transcriptomic data analysis
+* Cell type annotation
+* Biological interpretation
+
+### Tools
+
+* Python
+* Scanpy
+* AnnData
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* JupyterLab
 
 ---
 
 ## Requirements
-
-Software used:
 
 * Python 3.10
 * Scanpy
@@ -186,48 +182,11 @@ jupyter lab
 
 Open:
 
-```
+```text
 notebooks/01_pbmc_cell_atlas.ipynb
 ```
 
 Run all cells sequentially.
-
----
-
-## Biological Interpretation
-
-The results demonstrate that transcriptional profiles alone are sufficient to distinguish immune cell populations without prior labeling. Cells cluster according to biological function, indicating that gene expression patterns strongly correlate with cellular identity.
-
-This project highlights the power of single-cell RNA sequencing to study immune heterogeneity and provides a reproducible workflow for analysing high-dimensional transcriptomic data.
-
----
-## Skills Demonstrated
-
-### Single-Cell Transcriptomics
-
-- Quality control and filtering
-- Highly variable gene selection
-- PCA and UMAP
-- Leiden clustering
-- Differential expression analysis
-
-### Computational Biology
-
-- Scanpy workflows
-- Transcriptomic data analysis
-- Cell type annotation
-- Biological interpretation
-
-### Tools
-
-- Python
-- Scanpy
-- AnnData
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- JupyterLab
 
 ---
 
@@ -245,6 +204,8 @@ This project highlights the power of single-cell RNA sequencing to study immune 
 
 Key references are listed in the accompanying report PDF.
 
+---
+
 ## Author
 
 **Agata Gabara**
@@ -253,11 +214,11 @@ MSc Bioinformatics Student
 
 Research Interests:
 
-- Single-Cell Transcriptomics
-- Cancer Genomics
-- Computational Biology
-- Immunology
-- Multi-Omics Integration
+* Single-Cell Transcriptomics
+* Cancer Genomics
+* Computational Biology
+* Immunology
+* Multi-Omics Integration
 
 GitHub: https://github.com/ag48665
 
