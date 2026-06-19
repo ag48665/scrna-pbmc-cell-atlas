@@ -166,7 +166,7 @@ The dataset is widely used as a benchmark for learning and validating single-cel
 
 ---
 
-## ## Key Results 
+ ## Key Results 
 
 * 2638 high-quality cells remained after filtering
 * Unsupervised clustering revealed 10 transcriptionally distinct populations
