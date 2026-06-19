@@ -19,7 +19,25 @@ Single-cell transcriptomics enables gene expression profiling at cellular resolu
 * Assign biological cell types based on known immune markers
 
 ---
+## Main Findings
 
+### Immune cell populations can be accurately reconstructed using transcriptomic profiles
+
+Unsupervised clustering identified major immune populations including T cells, B cells, NK cells, monocytes, dendritic cells, and platelets.
+
+### Marker genes clearly define cellular identity
+
+Differential expression analysis identified canonical marker genes consistent with known immune biology.
+
+### Single-cell transcriptomics captures immune heterogeneity
+
+Distinct transcriptional programs were observed across immune cell populations, demonstrating the ability of scRNA-seq to resolve cellular diversity.
+
+### The computational workflow reproduces established PBMC cell atlases
+
+Cluster assignments and marker genes were highly consistent with previously published PBMC analyses.
+
+---
 ## Dataset
 
 The dataset was obtained from the Scanpy built-in dataset:
@@ -62,6 +80,25 @@ Potential applications include:
 This project also demonstrates practical applications of computational biology methods including dimensionality reduction, clustering, differential expression analysis, and biological interpretation of high-dimensional transcriptomic data.
 
 Importantly, this project is intended for educational and research purposes and is not designed for direct clinical decision-making.
+
+---
+## Project Highlights
+
+✔ Single-cell RNA-seq analysis using Scanpy
+
+✔ Quality control and preprocessing of 2,700+ PBMCs
+
+✔ UMAP visualization and Leiden clustering
+
+✔ Differential expression analysis
+
+✔ Marker-based cell type annotation
+
+✔ Construction of a PBMC cell atlas
+
+✔ Reproducible single-cell workflow
+
+✔ Biological interpretation of immune cell populations
 
 ---
 
@@ -164,6 +201,35 @@ The results demonstrate that transcriptional profiles alone are sufficient to di
 This project highlights the power of single-cell RNA sequencing to study immune heterogeneity and provides a reproducible workflow for analysing high-dimensional transcriptomic data.
 
 ---
+## Skills Demonstrated
+
+### Single-Cell Transcriptomics
+
+- Quality control and filtering
+- Highly variable gene selection
+- PCA and UMAP
+- Leiden clustering
+- Differential expression analysis
+
+### Computational Biology
+
+- Scanpy workflows
+- Transcriptomic data analysis
+- Cell type annotation
+- Biological interpretation
+
+### Tools
+
+- Python
+- Scanpy
+- AnnData
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- JupyterLab
+
+---
 
 ## Limitations
 
@@ -178,3 +244,21 @@ This project highlights the power of single-cell RNA sequencing to study immune 
 ## References
 
 Key references are listed in the accompanying report PDF.
+
+## Author
+
+**Agata Gabara**
+
+MSc Bioinformatics Student
+
+Research Interests:
+
+- Single-Cell Transcriptomics
+- Cancer Genomics
+- Computational Biology
+- Immunology
+- Multi-Omics Integration
+
+GitHub: https://github.com/ag48665
+
+LinkedIn: https://www.linkedin.com/in/agatha-gabara-06494a37/
